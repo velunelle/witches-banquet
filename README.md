@@ -4,7 +4,7 @@ v1.0.0。以水彩甜品、万圣节手账拼贴和双人秘密选毒为主题�
 
 正式游戏：https://witches-banquet.fuzzy-egret-1442.chatgpt.site/
 
-专用仓库：https://github.com/2952561418qqcom-tech/witches-banquet （本发布包已准备好；当前对话未成功推送，不能将仓库创建视作源码上传完成。）
+专用仓库：https://github.com/2952561418qqcom-tech/witches-banquet （完整项目已提交至 main，包含 208 个受版本管理的文件。）
 
 ## 玩法与操作
 
@@ -53,14 +53,14 @@ GitHub Pages 的两种准确部署方式见 [DEPLOYMENT.md](DEPLOYMENT.md)。已
 | `dist/` | 可直接部署的多文件网站 |
 | `scripts/`、`tests/` | 构建、资源校验、源码导出与回归测试 |
 | `docs/` | 测试报告、Entire 状态、公开资料审核表、许可证建议 |
-| `release/` | 独立 HTML、源码 TXT 与资源指纹清单 |
+| `release/` | 本地构建生成的独立 HTML、源码 TXT 与资源指纹清单；交付 ZIP 包含，Git 按 .gitignore 不跟踪 |
 | `.github/workflows/pages.yml` | 可手动触发的 Pages 构建部署 |
 
 ## 开场加载与独立 HTML
 
 保留现有完整开屏和拼贴视觉。若加载超过 15 秒，只显示“先进入晚宴”按钮，由玩家选择；不会静默跳过，也不会无出口卡住。正常就绪后取消加载保护，开场保留到上滑、滚轮或点击。
 
-`release/witches-banquet-standalone.html` 包含脚本、样式、字体、图片和开屏。HTTP 下已验证；安卓/iOS 本地 `file://` 或文件预览器可能限制脚本、iframe、存储或 WebRTC，本地开屏兼容仍待真机复验。优先打开正式 HTTPS 网站；HTML 备份不会携带浏览器存档。
+运行 `npm run build` 可生成 `release/witches-banquet-standalone.html`；交付 ZIP 也附有此文件。它包含脚本、样式、字体、图片和开屏。HTTP 下已验证；安卓/iOS 本地 `file://` 或文件预览器可能限制脚本、iframe、存储或 WebRTC，本地开屏兼容仍待真机复验。优先打开正式 HTTPS 网站；HTML 备份不会携带浏览器存档。
 
 ## 许可与公开审核
 
@@ -68,4 +68,4 @@ GitHub Pages 的两种准确部署方式见 [DEPLOYMENT.md](DEPLOYMENT.md)。已
 
 原创代码建议采用 MIT，但尚待项目发起者确认；`LICENSE` 当前记录待确认状态，`docs/LICENSE-MIT-PROPOSAL.txt` 仅是草案，不生效。图片另列权利，不自动套用 MIT；字体与第三方库继续保留原许可证。详见 [ASSETS.md](ASSETS.md) 和 [公开资料审核清单](docs/PUBLIC-REVIEW.md)。
 
-测试与未验证事项见 [测试报告](docs/TEST-REPORT.md)。GitHub 上传、Pages 发布与 Entire 接入／积分状态均按实际结果单独记录，不以文件准备好代替成功上线。
+测试与未验证事项见 [测试报告](docs/TEST-REPORT.md)。2026-10-30 已将完整项目提交到本仓库，208 个文件与交付包逐项核对通过。正式游戏继续公开运行；GitHub Pages 尚未启用，工作流保留手动触发。Entire 接入／积分状态仍待单独核实。

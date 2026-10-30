@@ -55,6 +55,8 @@ npm run export:text
 - 原正式网站已经运行；本轮更新后以发布结果为准。
 - ZIP 内 dist 是完整构建产物，已检查本地路径和内嵌素材，无需当前开发工作区。
 - Pages 工作流与步骤已准备，**未在 GitHub Actions 或 Pages 上运行**。
-- 当前对话此前调用 GitHub 内容写入返回 403，未推送本包；请由另一个具备写权限的对话完成。无需重复让项目发起者创建仓库。
+- 2026-10-30 已恢复上传，并提交完整项目到 main。共 208 个受版本管理的文件，均与交付包逐项核对；release/ 内 4 个生成文件按原 .gitignore 保留在交付 ZIP。
+- 源码提交：fcaa128880377c17e9164f97c538d1cbfab41c17。29 项自动测试、静态检查及资源检查均通过。
+- 正式游戏已公开运行：https://witches-banquet.fuzzy-egret-1442.chatgpt.site/ 。GitHub Pages 尚未开启；现有 GitHub 连接不提供 Pages 设置及工作流触发接口，网页端需要另行登录。
 
 官方依据：https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
