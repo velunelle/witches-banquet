@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN" class="opening-boot">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html.opening-boot::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        background: radial-gradient(ellipse at 50% 40%, #745070, #3d2945 75%);
+      }
+      html.opening-boot,
+      html:has(#openingFrame) {
+        overflow: hidden;
+      }
+    </style>
+    <noscript
+      ><style>
+        html.opening-boot::before,
+        html.opening-boot #bootLoader {
+          display: none;
+        }
+      </style></noscript
+    >
+    <!--BOOT_STYLE-->
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#33253f" />
+    <meta
+      name="description"
+      content="女巫的毒药 · 南瓜灯下的秘密晚餐。用手绘甜品、角色对话与万圣节手账，赴一场双人的盛宴。"
+    />
+    <title>女巫的毒药 · 南瓜灯下的晚餐</title>
+
+    <link
+      rel="preload"
+      href="assets/cute-round.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+  </head>
+  <body>
+    <div id="bootLoader" role="status" aria-label="正在准备秘密晚餐">
+      <div class="boot-track">
+        <i class="boot-trail"></i
+        ><span class="boot-bat"
+          ><svg viewBox="0 0 120 66" aria-hidden="true">
+            <path
+              class="boot-wing boot-left"
+              d="M59 36Q31 0 2 11Q16 22 11 40Q25 28 33 48Q45 34 58 51Z"
+            />
+            <path
+              class="boot-wing boot-right"
+              d="M61 36Q89 0 118 11Q104 22 109 40Q95 28 87 48Q75 34 62 51Z"
+            />
+            <path
+              d="M51 19L52 3L60 14L68 3L69 19Q82 43 66 57L60 65L54 57Q38 43 51 19"
+            />
+            <g fill="#3d2945">
+              <circle cx="56" cy="27" r="2" />
+              <circle cx="65" cy="27" r="2" />
+            </g></svg></span
+        ><span class="boot-star">✦</span>
+      </div>
+      <p><span id="bootMessage">正在点亮秘密晚餐</span> <span id="bootCount">0 / 4</span></p>
+      <button id="bootContinue" type="button" hidden>先进入晚宴</button>
+    </div>
+    <div class="ambient" aria-hidden="true"></div>
+    <div id="fireflies" aria-hidden="true"></div>
+    <header class="masthead">
+      <button class="wordmark" id="homeBrand">
+        <span class="brandmoon">☾</span
+        ><span>女巫的毒药<small>A SECRET SUPPER</small></span>
+      </button>
+      <nav>
+        <button id="rulesBtn">赴宴须知</button
+        ><button id="notesBtn">美味手账 <span id="noteCount">0</span></button>
+        <div class="music-dock" role="group" aria-label="背景音乐">
+          <button
+            id="soundBtn"
+            class="sound-switch"
+            aria-label="播放背景音乐"
+            aria-pressed="false"
+          >
+            <span class="record-icon" aria-hidden="true">♪</span
+            ><span id="musicAction">播放</span></button
+          ><button
+            id="nextTrack"
+            class="next-track"
+            aria-label="下一首背景音乐"
+            title="下一首背景音乐"
+          >
+            下一首 <span aria-hidden="true">›</span></button
+          ><span id="trackName" class="track-name" aria-live="polite"
+            >南瓜糖果圆舞曲</span
+          >
+        </div>
+      </nav>
+    </header>
+    <main id="app"></main>
+    <footer>
+      <span>南瓜灯亮着，晚餐还热着。</span><button id="saveBtn">存档</button
+      ><button id="creditsBtn">素材与鸣谢</button>
+    </footer>
+    <div id="modal" hidden></div>
+    <div id="sceneTransition" aria-hidden="true"></div>
+    <div id="snackbar" role="status" aria-live="polite"></div>
+  </body>
+</html>

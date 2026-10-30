@@ -1,0 +1,574 @@
+@font-face {
+  font-family: CuteRound;
+  src: url("../assets/cute-round.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: CuteEnglish;
+  src: url("../assets/pacifico.ttf");
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: #38243f;
+  color: #fae5b5;
+  font-family: CuteRound, sans-serif;
+  isolation: isolate;
+}
+.opening-bg {
+  position: fixed;
+  inset: 0;
+  animation: backdrop 5.6s both;
+  background: radial-gradient(ellipse at 50% 40%, #745070, #3d2945 70%);
+}
+.opening-bg:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    #f4dabd06 0 1px,
+    transparent 1px 5px
+  );
+}
+.paper-edge {
+  position: fixed;
+  top: -15%;
+  bottom: -15%;
+  background: #f2dbad;
+  transform: rotate(12deg);
+  clip-path: polygon(
+    0 0,
+    90% 0,
+    100% 8%,
+    91% 17%,
+    99% 28%,
+    92% 39%,
+    100% 52%,
+    91% 63%,
+    98% 75%,
+    92% 87%,
+    100% 100%,
+    0 100%
+  );
+  opacity: 0.9 !important;
+  width: 25%;
+  background-color: #edcfb4;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 35px, #b88b9d33 35px 36px),
+    repeating-linear-gradient(90deg, transparent 0 35px, #b88b9d33 35px 36px);
+  border: 7px solid #c99789;
+  animation: edge-in 1s both;
+}
+.paper-edge.left {
+  left: -17%;
+  rotate: -3deg;
+}
+.paper-edge.right {
+  right: -17%;
+  background: #9c708e
+    repeating-linear-gradient(90deg, #65395566 0 17px, transparent 17px 34px);
+  border-color: #d6a986;
+  rotate: 183deg;
+}
+.opening-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(680px, 90vw);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: content-in 0.65s cubic-bezier(0.15, 0.8, 0.25, 1) both;
+}
+.opening-caption {
+  font:
+    24px CuteEnglish,
+    cursive;
+  color: #f0c687;
+  margin-bottom: 6px;
+}
+h1 {
+  font-size: clamp(36px, 4.2vw, 58px);
+  letter-spacing: 6px;
+  margin: 0;
+  text-shadow: 0 3px #7d5b84;
+}
+.opening-deck {
+  position: relative;
+  height: 315px;
+  width: 460px;
+  max-width: 100%;
+  margin: 26px auto 12px;
+  perspective: 1000px;
+}
+.orbit-ring {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border: 1px solid #e6c79670;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  translate: -50% -50%;
+  animation: orbit 12s linear infinite;
+}
+.orbit-ring:before,
+.orbit-ring:after {
+  content: "✦";
+  position: absolute;
+  left: 50%;
+  top: -14px;
+  color: #ffe4ab;
+  font-size: 23px;
+}
+.orbit-ring:after {
+  top: auto;
+  bottom: -14px;
+}
+.orbit-ring.second {
+  width: 395px;
+  height: 395px;
+  border-style: dashed;
+  border-color: #c0a5d34d;
+  animation-direction: reverse;
+}
+.opening-card {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  width: 184px;
+  height: 272px;
+  --end-r: -12deg;
+  transform: translateX(var(--end-x)) rotate(var(--end-r));
+  animation: deal 1.05s cubic-bezier(0.18, 0.8, 0.25, 1) both;
+  filter: drop-shadow(0 12px 10px #1e102c55);
+  --end-x: -183px;
+}
+.opening-card.moon {
+  --end-r: 12deg;
+  top: 28px;
+  animation-delay: 0.13s;
+  --end-x: -1px;
+}
+.flip {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  animation: card-flip 0.85s cubic-bezier(0.3, 0.1, 0.2, 1) 0.9s both;
+}
+.moon .flip {
+  animation-delay: 1.12s;
+}
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border: 3px solid #f5d5a1;
+  border-radius: 23px;
+  box-shadow:
+    inset 0 0 0 6px #fff4db,
+    inset 0 0 0 7px #cda8cd;
+  background: #f6e8d5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  color: #875c96;
+}
+.card-front {
+  transform: rotateY(180deg);
+}
+.card-front img {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  border: 3px solid #d6b385;
+  object-fit: cover;
+  margin: 8px 0 12px;
+}
+.card-front strong {
+  font-size: 26px;
+  font-weight: 400;
+}
+.card-front small {
+  font:
+    13px CuteEnglish,
+    cursive;
+  line-height: 1.8;
+}
+.card-front .corner-star {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  color: #ae7dbd;
+  font-size: 17px;
+}
+.card-symbol {
+  font-size: 19px;
+  color: #c0984e;
+  margin-top: 4px;
+}
+.card-back {
+  font-size: 73px;
+  background: repeating-linear-gradient(
+    45deg,
+    #674572 0 18px,
+    #73517e 18px 36px
+  );
+  color: #f8d89c;
+  gap: 20px;
+}
+.card-back small {
+  font:
+    15px CuteEnglish,
+    cursive;
+}
+.duel-seal {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  translate: -50% -50%;
+  width: 57px;
+  height: 57px;
+  background: #d4a56b;
+  color: #fff0cd;
+  border: 3px solid #fff0cd;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 #75526b;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  animation: seal 0.6s 1.65s both;
+}
+.opening-line {
+  margin: 25px 0 6px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  animation: text-in 0.6s 1.8s both;
+}
+.opening-script {
+  font:
+    20px CuteEnglish,
+    cursive;
+  color: #dcc1df;
+  animation: text-in 0.7s 2s both;
+}
+.opening-sticker {
+  position: absolute;
+  width: clamp(75px, 10vw, 135px);
+  object-fit: contain;
+  animation:
+    sticker-arrive 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) both,
+    sticker-float 3s ease-in-out 1s infinite;
+  pointer-events: none;
+  filter: drop-shadow(2px 0 #fff0d4) drop-shadow(-2px 0 #fff0d4)
+    drop-shadow(0 3px #fff0d4) drop-shadow(8px 10px 0 #b38ab877)
+    drop-shadow(0 12px 8px #1e123645);
+}
+.cat {
+  left: 14%;
+  top: 21%;
+  rotate: -12deg;
+}
+.pot {
+  right: 12%;
+  bottom: 19%;
+  rotate: 12deg;
+  animation-delay: 0.2s, 1.2s;
+}
+.hat {
+  right: 17%;
+  top: 15%;
+  rotate: 15deg;
+  animation-delay: 0.12s, 1.12s;
+}
+.cake {
+  left: 17%;
+  bottom: 16%;
+  rotate: -9deg;
+  animation-delay: 0.3s, 1.3s;
+}
+.spark {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  font-size: var(--size);
+  color: var(--color);
+  animation: twinkle 1.9s var(--delay) ease-in-out infinite;
+  pointer-events: none;
+}
+#skip {
+  position: fixed;
+  bottom: max(66px, calc(env(safe-area-inset-bottom) + 50px));
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  border: 1px solid #f0d6ba66;
+  border-radius: 24px;
+  background: #38263bd4;
+  color: #f3ddc5;
+  padding: 11px 19px;
+  font: 14px CuteRound;
+  min-height: 44px;
+  cursor: pointer;
+  z-index: 5;
+}
+.reveal-sheet {
+  position: fixed;
+  inset: 0;
+  background: #e9cce3;
+  clip-path: circle(0 at 50% 50%);
+  pointer-events: none;
+}
+@keyframes content-in {
+  from {
+    opacity: 0;
+    translate: 0 28px;
+    scale: 0.9;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+    scale: 1;
+  }
+}
+@keyframes deal {
+  from {
+    opacity: 0;
+    transform: translateX(-92px) translateY(90px) rotate(0) scale(0.65);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(var(--end-x)) rotate(var(--end-r));
+  }
+}
+@keyframes card-flip {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes seal {
+  from {
+    opacity: 0;
+    scale: 2;
+    rotate: -30deg;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    rotate: -8deg;
+  }
+}
+@keyframes orbit {
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes text-in {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+@keyframes sticker-arrive {
+  from {
+    opacity: 0;
+    scale: 0.4;
+    translate: 0 55px;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    translate: 0;
+  }
+}
+@keyframes sticker-float {
+  50% {
+    translate: 0 -9px;
+  }
+}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    scale: 0.65;
+  }
+  50% {
+    opacity: 0.9;
+    scale: 1;
+  }
+}
+@keyframes backdrop {
+  from {
+    scale: 1.07;
+  }
+  to {
+    scale: 1;
+  }
+}
+@keyframes edge-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.22;
+  }
+}
+@media (max-width: 720px) {
+  .opening-bg {
+    background-image: none;
+    background: radial-gradient(ellipse at 50% 40%, #745070, #3d2945 75%);
+  }
+  .opening-content {
+    width: 96vw;
+  }
+  .opening-caption {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 37px;
+    letter-spacing: 4px;
+  }
+  .opening-deck {
+    width: 340px;
+    height: 286px;
+    margin: 25px auto 10px;
+  }
+  .opening-card {
+    width: 160px;
+    height: 245px;
+    --end-x: -159px;
+  }
+  .opening-card.moon {
+    --end-x: -1px;
+  }
+  .card-front img {
+    width: 109px;
+    height: 109px;
+  }
+  .card-front strong {
+    font-size: 24px;
+  }
+  .orbit-ring {
+    width: 290px;
+    height: 290px;
+  }
+  .orbit-ring.second {
+    width: 325px;
+    height: 325px;
+  }
+  .opening-line {
+    font-size: 19px;
+    margin-top: 21px;
+  }
+  .opening-script {
+    font-size: 18px;
+  }
+  .opening-sticker {
+    width: 78px;
+  }
+  .cat {
+    left: 3%;
+    top: 9%;
+  }
+  .hat {
+    right: 4%;
+    top: 9%;
+    width: 87px;
+  }
+  .pot {
+    right: 3%;
+    bottom: 11%;
+    width: 90px;
+  }
+  .cake {
+    left: 5%;
+    bottom: 10%;
+    width: 81px;
+  }
+  #skip {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+  .paper-edge {
+    width: 18%;
+  }
+  .duel-seal {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+  .paper-edge.left {
+    left: -12%;
+  }
+  .paper-edge.right {
+    right: -12%;
+  }
+}
+@media (max-height: 600px) {
+  .opening-content {
+    scale: 0.75;
+  }
+  .opening-sticker {
+    width: 70px;
+  }
+  .cat,
+  .hat {
+    top: 10%;
+  }
+  .pot,
+  .cake {
+    bottom: 10%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+/* The opening shares the game's layered paper scene, without silhouette masks. */
+.preparing * {
+  animation-play-state: paused !important;
+}
+.preparing .opening-content {
+  opacity: 0;
+}
+
+body {
+  touch-action: none;
+  user-select: none;
+  overscroll-behavior: none;
+}
+
+.gesture-hint {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: max(20px, calc(env(safe-area-inset-bottom) + 8px));
+  margin: 0;
+  text-align: center;
+  font:
+    15px CuteRound,
+    sans-serif;
+  color: #f3ddc5;
+  pointer-events: none;
+}

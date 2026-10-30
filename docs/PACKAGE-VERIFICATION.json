@@ -1,0 +1,15 @@
+{
+  "cleanDirectoryNpmCi": "passed",
+  "cleanDirectoryBuild": "passed",
+  "cleanDirectoryResourceAudit": "passed",
+  "identicalRuntimeFiles": 81,
+  "targetedCredentialScan": "passed",
+  "autoTests": {
+    "passed": 29,
+    "failed": 0
+  },
+  "standaloneFileProtocolPhone": "not verified",
+  "githubPages": "not deployed",
+  "originalCodeLicense": "pending owner review",
+  "avatars": "use rights only; no additional grant"
+}

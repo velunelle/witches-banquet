@@ -1,0 +1,23 @@
+{
+  "name": "witches-banquet",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "export:text": "node scripts/export-text.mjs",
+    "check:assets": "node scripts/check-assets.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "acorn": "^8.15.0",
+    "astring": "^1.9.0",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.39.5",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.0",
+    "prettier": "^3.6.0"
+  },
+  "license": "UNLICENSED"
+}

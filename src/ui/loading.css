@@ -1,0 +1,104 @@
+/* Critical loader styles are inlined by the build, before the first body paint. */
+#bootLoader {
+  display: none;
+}
+.opening-boot #bootLoader {
+  position: fixed;
+  inset: 0;
+  z-index: 10002;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: #f5d5a1;
+  pointer-events: auto;
+  --load: 0;
+}
+.boot-track {
+  width: min(230px, 60vw);
+  position: relative;
+  height: 58px;
+}
+.boot-trail {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed #d7b4cf66;
+}
+.boot-bat {
+  position: absolute;
+  top: 2px;
+  left: calc(var(--load) * 100%);
+  width: 50px;
+  margin-left: -25px;
+  transition: left 0.32s cubic-bezier(0.2, 0.7, 0.3, 1);
+  filter: drop-shadow(0 4px 8px #1e12294d);
+}
+.boot-bat svg {
+  display: block;
+  width: 100%;
+  fill: #f5d5a1;
+  overflow: visible;
+  animation: boot-bob 0.7s ease-in-out infinite alternate;
+}
+.boot-wing {
+  transform-box: fill-box;
+  animation: boot-flap 0.2s ease-in-out infinite alternate;
+}
+.boot-left {
+  transform-origin: right center;
+}
+.boot-right {
+  transform-origin: left center;
+  animation-delay: -0.08s;
+}
+.boot-star {
+  position: absolute;
+  right: -5px;
+  top: 26px;
+  font-size: 12px;
+  color: #dab7db;
+}
+#bootLoader p {
+  margin: 0;
+  font:
+    14px/1.7 CuteRound,
+    system-ui,
+    sans-serif;
+  letter-spacing: 1px;
+}
+#bootCount {
+  margin-left: 9px;
+  color: #d8b5dc;
+  font-variant-numeric: tabular-nums;
+}
+#bootContinue:not([hidden]) {
+  padding: 12px 24px;
+  border: 1px solid #f5d5a1;
+  border-radius: 24px;
+  background: #5c3c66;
+  color: #fae5b5;
+  font: 16px/1.5 CuteRound, system-ui, sans-serif;
+  cursor: pointer;
+}
+@keyframes boot-flap {
+  to {
+    transform: scaleY(0.4);
+  }
+}
+@keyframes boot-bob {
+  to {
+    transform: translateY(-5px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boot-wing,
+  .boot-bat svg {
+    animation: none;
+  }
+  .boot-bat {
+    transition: none;
+  }
+}
