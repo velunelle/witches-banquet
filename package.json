@@ -19,5 +19,5 @@
     "postcss": "^8.5.0",
     "prettier": "^3.6.0"
   },
-  "license": "UNLICENSED"
+  "license": "MIT"
 }

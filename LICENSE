@@ -1,12 +1,21 @@
-许可状态：待项目发起者确认
+MIT License
 
-本发布候选包不对项目原创代码和图片授予新的开源许可。
-docs/LICENSE-MIT-PROPOSAL.txt 仅为原创代码的 MIT 许可建议，尚未生效。
-第三方依赖和字体继续适用各自原有许可证，见 public/assets/licenses/。
+Copyright (c) 2026 Witches Banquet contributors
 
-角色头像作者：小红书博主野莓甜心。
-项目发起者仅拥有头像使用权。项目不授予第三方提取、复用、改编、转售、
-商业使用或再次分发头像的权利；不因源码公开而扩大作者原授权。
-公开仓库包含头像原文件的分发范围需先核对作者许可。
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-详细来源见 ASSETS.md；待审核的公开资料见 docs/PUBLIC-REVIEW.md。
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -10,6 +10,16 @@
 
 ![真实游戏主界面：万圣节纸艺拼贴、角色卡与三种游戏模式](docs/screenshots/home.jpg)
 
+## 演示视频与手机实拍
+
+[观看演示视频（74 秒，MP4）](docs/demo.mp4)
+
+视频和下面三张手机截图由项目发起者提供。截图中的自定义昵称、房间口令及界面文字属于录制当时的状态。
+
+| 开场 | 双人房间 | 游玩过程 |
+| --- | --- | --- |
+| ![手机开场](docs/screenshots/mobile-opening.jpg) | ![手机双人房间](docs/screenshots/mobile-room.jpg) | ![手机游玩过程](docs/screenshots/mobile-game.jpg) |
+
 ## 怎么玩
 
 1. 每局从 32 份水彩甜品中随机上桌 16 份。
@@ -90,9 +100,11 @@ python3 -m http.server 8000 --directory dist
 
 ## 许可状态
 
-当前为**源码公开、原创代码许可待确认**状态，package.json 标记为 UNLICENSED；MIT 草案尚未生效。公开仓库不代表所有代码和素材均可自由复用。
+原创代码与本项目编写的文档采用 **MIT**，见 [LICENSE](LICENSE)。允许在保留版权与许可声明的条件下使用、修改、分发及商用代码。引用的第三方代码保留其原版权和许可证，不将其署名改成本项目作者。
 
-角色头像仅有本游戏使用权，不向第三方开放提取、复用、改编、转售或再次分发权；游戏截图也不单独授予其中素材的复用权。AI 甜品与贴纸的对外使用权限仍待确认，字体和第三方库遵循各自许可证。请分别查看 [LICENSE](LICENSE) 与 [ASSETS.md](ASSETS.md)。
+**MIT 不覆盖图片、角色头像、截图中的素材或字体。** 角色头像作者为野莓甜心；用户提供的作者规则允许保存、自裁、头像和壁纸用途，同时禁止商用、倒卖、临摹、搬运、二创等。这份规则没有明确说明允许将头像原文件随公开仓库分发，因此不能把它表述为已获得该项授权，也不向下游授予头像复用权。本项目生成的 AI 甜品与贴纸暂不额外开放许可，字体和第三方库分别遵循原许可。
+
+详细来源、授权范围与仍需确认的头像分发事项见 [ASSETS.md](ASSETS.md) 和 [许可说明](docs/LICENSING.md)。
 
 ## English
 
@@ -100,4 +112,4 @@ python3 -m http.server 8000 --directory dist
 
 [Play in your browser](https://witches-banquet.fuzzy-egret-1442.chatgpt.site/). Supports a computer opponent, two players on one device, and two-device online rooms. No account or model API is required. The interface is currently in Chinese. Online play uses PeerJS / WebRTC; connectivity depends on the network.
 
-Build with `npm ci && npm run build`; serve all files inside dist over HTTPS. Original-code licensing is pending (UNLICENSED). Images, character portraits, fonts and third-party libraries have separate terms; see [ASSETS.md](ASSETS.md).
+Build with `npm ci && npm run build`; serve all files inside dist over HTTPS. Original code and project-authored documentation are MIT-licensed; retain third-party notices. Images, character portraits, fonts and third-party libraries have separate terms; see [ASSETS.md](ASSETS.md).
