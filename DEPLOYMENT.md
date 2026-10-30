@@ -11,14 +11,14 @@
 
 ## GitHub Pages：推荐 GitHub Actions
 
-目标仓库仅使用 `2952561418qqcom-tech/witches-banquet`，不新建、不使用 credit-test。
+目标仓库仅使用 `velunelle/witches-banquet`，不新建、不使用 credit-test。
 
 1. 由具备写权限的对话解压 ZIP，把项目目录**内部的内容**提交到仓库根，保留目录结构和 `.github/`；不要只把整个 ZIP 放进仓库。
 2. 公开前核对 `docs/PUBLIC-REVIEW.md`，尤其头像原文件的分发范围与代码许可证。
 3. 仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**。
 4. 打开 Actions → **Deploy GitHub Pages** → Run workflow → 选择 main → Run workflow。
 5. 工作流安装锁定依赖、运行测试、构建和资源检查，把 `dist/` 作为 Pages artifact 上传后部署。
-6. 等待 build 和 deploy 均成功，以 deploy 输出的 `page_url` 或 Settings → Pages 的实际网址为准。预期项目路径是 `https://2952561418qqcom-tech.github.io/witches-banquet/`，但本轮未实际发布或验证这个地址。
+6. 等待 build 和 deploy 均成功，以 deploy 输出的 `page_url` 或 Settings → Pages 的实际网址为准。预期项目路径是 `https://velunelle.github.io/witches-banquet/`，但本轮未实际发布或验证这个地址。
 7. 部署后测试开屏、进主界面、单机一局与房间码入口。无须加入 SPA 回退规则；资源全为相对路径，适配 `/witches-banquet/` 子路径。
 
 工作流只启用手动触发，避免审核前上传源码就自动公开游戏。确认发布后，可自行增加 `push: branches: [main]` 自动部署；本轮未擅自启用。

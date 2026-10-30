@@ -2,9 +2,11 @@
 
 南瓜灯下的晚餐 · A Secret Supper
 
+作者：**Velunelle** · 仓库：**velunelle/witches-banquet**
+
 两位女巫，一桌甜品，各藏一道毒药。轮流动筷，先中招的人离席。
 
-[立即试玩](https://witches-banquet.fuzzy-egret-1442.chatgpt.site/) · [反馈问题](https://github.com/2952561418qqcom-tech/witches-banquet/issues/new/choose) · [参与修改](CONTRIBUTING.md) · [素材与许可](ASSETS.md)
+[立即试玩](https://witches-banquet.fuzzy-egret-1442.chatgpt.site/) · [反馈问题](https://github.com/velunelle/witches-banquet/issues/new/choose) · [参与修改](CONTRIBUTING.md) · [素材与许可](ASSETS.md)
 
 手机和电脑均可通过浏览器游玩，无需注册或配置 API。当前版本 **v1.0.0**，提供人机、双人同屏和房间码联机。
 
@@ -53,7 +55,7 @@
 从源码重建需要 Node.js 22 或更新版本，以及 npm：
 
 ```sh
-git clone https://github.com/2952561418qqcom-tech/witches-banquet.git
+git clone https://github.com/velunelle/witches-banquet.git
 cd witches-banquet
 npm ci
 npm test
@@ -90,7 +92,7 @@ python3 -m http.server 8000 --directory dist
 - 安卓 Chrome、iOS Safari 的完整兼容矩阵及更多设备上的加载表现仍待补充。
 - 正式试玩站已公开运行；GitHub Pages 是尚未启用的备用部署方式。
 
-[测试记录](docs/TEST-REPORT.md) · [版本变化](CHANGELOG.md) · [自动检查记录](https://github.com/2952561418qqcom-tech/witches-banquet/actions/workflows/ci.yml)
+[测试记录](docs/TEST-REPORT.md) · [版本变化](CHANGELOG.md) · [自动检查记录](https://github.com/velunelle/witches-banquet/actions/workflows/ci.yml)
 
 ## 创作与鸣谢
 
@@ -102,7 +104,7 @@ python3 -m http.server 8000 --directory dist
 
 原创代码与本项目编写的文档采用 **MIT**，见 [LICENSE](LICENSE)。允许在保留版权与许可声明的条件下使用、修改、分发及商用代码。引用的第三方代码保留其原版权和许可证，不将其署名改成本项目作者。
 
-**MIT 不覆盖图片、角色头像、截图中的素材或字体。** 角色头像作者为野莓甜心；用户提供的作者规则允许保存、自裁、头像和壁纸用途，同时禁止商用、倒卖、临摹、搬运、二创等。这份规则没有明确说明允许将头像原文件随公开仓库分发，因此不能把它表述为已获得该项授权，也不向下游授予头像复用权。本项目生成的 AI 甜品与贴纸暂不额外开放许可，字体和第三方库分别遵循原许可。
+**MIT 不覆盖图片、角色头像、截图中的素材或字体。** 角色头像作者为野莓甜心；用户提供的作者规则允许保存、自裁、头像和壁纸用途，同时禁止商用、倒卖、临摹、搬运、二创等。这份规则没有明确说明允许将头像原文件随公开仓库分发，因此不能把它表述为已获得该项授权，也不向下游授予头像复用权。本项目有权授权的 32 份 AI 水彩甜品与 16 份万圣节贴纸采用 CC BY 4.0，署名 Velunelle，允许修改、传播及商用，须注明来源、许可证及修改情况；字体和第三方库分别遵循原许可。
 
 详细来源、授权范围与仍需确认的头像分发事项见 [ASSETS.md](ASSETS.md) 和 [许可说明](docs/LICENSING.md)。
 
@@ -112,4 +114,4 @@ python3 -m http.server 8000 --directory dist
 
 [Play in your browser](https://witches-banquet.fuzzy-egret-1442.chatgpt.site/). Supports a computer opponent, two players on one device, and two-device online rooms. No account or model API is required. The interface is currently in Chinese. Online play uses PeerJS / WebRTC; connectivity depends on the network.
 
-Build with `npm ci && npm run build`; serve all files inside dist over HTTPS. Original code and project-authored documentation are MIT-licensed; retain third-party notices. Images, character portraits, fonts and third-party libraries have separate terms; see [ASSETS.md](ASSETS.md).
+Build with `npm ci && npm run build`; serve all files inside dist over HTTPS. Original code and project-authored documentation are MIT-licensed (Velunelle); retain third-party notices. The 32 project-generated dessert images and 16 journal stickers are licensed under CC BY 4.0 to the extent the project can grant rights: credit Velunelle, link the source and license, and indicate changes. Images, character portraits, fonts and third-party libraries have separate terms; see [ASSETS.md](ASSETS.md).

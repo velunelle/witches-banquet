@@ -19,5 +19,14 @@
     "postcss": "^8.5.0",
     "prettier": "^3.6.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Velunelle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/velunelle/witches-banquet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/velunelle/witches-banquet/issues"
+  },
+  "homepage": "https://witches-banquet.fuzzy-egret-1442.chatgpt.site/"
 }

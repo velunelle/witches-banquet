@@ -1,3 +1,5 @@
+> 当前仓库为 https://github.com/velunelle/witches-banquet ，对外署名 Velunelle。下文旧账号及旧授权状态是历史记录；当前以 LICENSE、ASSETS.md 和 docs/LICENSING.md 为准。
+
 > 历史记录：原创代码现已采用 MIT，当前许可与头像分发待确认事项以根 LICENSE、ASSETS.md 和 docs/LICENSING.md 为准。
 
 # 接续状态 · 2026-10-30

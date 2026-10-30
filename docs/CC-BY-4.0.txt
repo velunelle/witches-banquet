@@ -1,0 +1,18 @@
+女巫的毒药 · 原创 AI 素材授权声明
+
+署名：Velunelle
+来源：https://github.com/velunelle/witches-banquet
+许可证：Creative Commons Attribution 4.0 International (CC BY 4.0)
+完整法律条款：https://creativecommons.org/licenses/by/4.0/legalcode
+许可说明：https://creativecommons.org/licenses/by/4.0/
+
+在 Velunelle 有权授予的范围内，下列素材按 CC BY 4.0 提供：
+- public/assets/watercolor/water-*.webp（32 份水彩甜品）；
+- public/assets/journal-v5/*.png（16 份万圣节手账贴纸）；
+- dist 和独立 HTML 中上述素材的相同副本。
+
+允许复制、传播、修改及商用。使用者须合理注明 Velunelle、作品来源、许可证链接和修改情况，保留既有修改说明，不暗示作者背书，不附加限制该许可权利的条款或技术措施。只要遵守许可条件，授予的许可不可撤回。
+
+头像、字体、第三方代码和其他非上述范围的素材不适用本授权。混合截图、视频不因此取得其中第三方素材的复用权。AI 生成内容在不同地区可能不享有相同版权保护，本声明不扩大许可方无权授予的权利。
+
+本文件是项目授权声明，完整条件以以上链接所指的 CC BY 4.0 法律条款为准。更多来源和署名示例见 ASSETS.md。
